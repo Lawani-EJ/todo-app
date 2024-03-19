@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.sidebar {
+    flex: 0 0 250px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    background-color: beige;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.green {
+    background-color: green;
+}
+
+.hide-done {
+    margin-top: 20px;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.task-container {
+    width: calc(50% - 20px);
+    background-color: beige;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Your existing CSS styles */
+
+.task-container {
+    width: calc(50% - 20px);
+    background-color: beige;
+    padding: 10px;
+    /* Reduced padding */
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1px;
+    height: 200px;
+    /* Added margin between task containers */
+}
+
+.task-actions {
+    position: absolute;
+    bottom: 5px;
+    /* Adjusted bottom position */
+    right: 5px;
+    /* Adjusted right position */
+    display: flex;
+    align-items: center;
+}
+
+.dots {
+    height: 8px;
+    /* Reduced dot size */
+    width: 8px;
+    /* Reduced dot size */
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 4px;
+    /* Adjusted margin */
+    margin-top: -400px;
+}
+
+.done-checkbox {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 414px) {
+    .sidebar {
+        flex: 0 0 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .task-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .category,
+    .hide-done {
+        font-size: 14px;
+    }
+}
