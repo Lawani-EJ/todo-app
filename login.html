@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
 <body>
- <section id="login-section">
-        <h1>Login</h1>
-        <form id="login-form" action="#" method="#"> 
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+    <div class="login-wrapper">
+        <form action="" class="form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <input type="text" id="email" name="loginUser" required />
+                <label for="email">Email Address</label>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Login</button>
+            <div class="input-group">
+                <input type="password" id="password" name="loginPassword" required />
+                <label for="password">Password</label>
+            </div>
+            <input type="submit" class="submit-btn" value="Login" onclick="auth()"/>   
         </form>
-
-        <p>Are you new? <a href="./signup.html" id="signup-link">Sign Up</a></p>
-    </section>
-<script src="./script2.js"></script>
+    </div>
+    <script src="./login.js"></script>
 </body>
 </html>
