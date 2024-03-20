@@ -11,7 +11,7 @@
         margin: 0;
         font-family: Arial, sans-serif;
       }
-
+      
       .sidebar {
         position: fixed;
         top: 0;
@@ -19,47 +19,33 @@
         height: 100vh;
         width: 180px;
         padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 1px rgba(0.1, 0, 0, 0.1);
         background-color: whitesmoke;
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 1px 10px 0;
       }
 
       h2 {
         margin-top: 0;
         color: #333;
+        font-size: 60px;
       }
 
       .category {
         display: flex;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         cursor: pointer;
-        display: none;
+        background-color: whitesmoke;
+
       }
 
-      .circle {
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 10px;
-      }
+      .category:hover{
 
-      .purple {
-        background-color: #8a2be2;
-      }
-
-      .blue {
-        background-color: #4169e1;
-      }
-
-      .pink {
-        background-color: #ff69b4;
-      }
-
-      .green {
-        background-color: #008000;
-      }
+  background-color: rgba(169, 169, 169, 0.3);   
+            transition: background-color 1s ease;
+                    height: 40px;
+                            border-radius: 5px;
+   }
 
       .hide-done {
         margin-top: 20px;
@@ -67,6 +53,16 @@
 
       .hide-done label {
         color: #333;
+            margin-left: 35px;
+    margin-bottom: 0px;
+    margin-top: -19px;
+      }
+
+      .hide-done:hover{
+          background-color: rgba(169, 169, 169, 0.3);   
+            transition: background-color 1s ease;
+                    height: 40px;
+                            border-radius: 5px;
       }
 
       .image-container {
@@ -79,12 +75,12 @@
       }
 
       .add-category {
-        margin-bottom: 20px;
+        margin-top: 20px;
         background-color: gray;
         color: #000;
         border: none;
         border-radius: 5px;
-        padding: 10px;
+        padding: 13px;
         cursor: pointer;
       }
 
@@ -102,7 +98,7 @@
         display: flex;
         justify-content: right;
         align-items: right;
-        font-size: 30px;
+        font-size: 60px;
         color: #000000;
         cursor: pointer;
       }
@@ -169,23 +165,11 @@
       }
 
       .circle {
-        height: 20px;
-        width: 20px;
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
         display: inline-block;
         margin-right: 5px;
-      }
-
-      .blue {
-        background-color: blue;
-      }
-
-      .pink {
-        background-color: pink;
-      }
-
-      .purple {
-        background-color: purple;
       }
 
       .task-checkbox {
@@ -250,16 +234,16 @@
         margin-right: 10px;
       }
       .purple {
-        background-color: purple;
+        background-color: rgb(225, 141, 225);
       }
       .blue {
-        background-color: blue;
+        background-color: rgb(101, 101, 212);
       }
       .pink {
-        background-color: pink;
+        background-color: rgb(248, 220, 224);
       }
       .green {
-        background-color: green;
+        background-color: rgb(133, 214, 133);
       }
       .button-group {
         margin-top: 20px;
