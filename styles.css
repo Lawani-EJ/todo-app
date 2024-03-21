@@ -3,11 +3,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
-    scrollbar-width: 10px;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 90px;
 }
 
 #section1 {
@@ -21,7 +20,7 @@ h1 {
 }
 
 #section2 {
-    background-color: #f2f2f2;
+    background-color: #f1eae0;
     color: black;
     height: 100vh;
     display: flex;
@@ -31,7 +30,7 @@ h1 {
 }
 
 h2 {
-    font-size: 51px;
+    font-size: 60px;
 }
 
 #section2 img {
@@ -42,11 +41,10 @@ h2 {
 
 .button {
     padding: 10px 20px;
-    background-color: #a98149;
-    ;
+    background-color: #d8bc95;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 68px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
