@@ -8,4 +8,4 @@ function auth() {
     } else {
         alert("Invalid information");
     }
-}
+}           
