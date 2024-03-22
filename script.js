@@ -1,26 +1,36 @@
 $(document).ready(function () {
   var taskIdCounter = 0;
+  var categoryIdCounter = 1;
 
-  // Toggle the visibility of the "Add Task" form
   $(".add-task").click(function () {
     $(".container").toggle();
   });
 
-  // Toggle the visibility of the "Add Category" form
   $(".add-category").click(function () {
     $(".container_category").toggle();
   });
 
-  $(".add-category").click(function(){
-    var circlepurple = $("#circle purple").val();
-    var circleblue = $("#circle blue").val();
-    var circlepink = $("#circle pink").val();
-    var circlegreen = $("#circle green").val();
+  $(".submit").click(function () {
+    var title1 = $("category_title").val();
 
-    circleIdCounter++;
+    categoryIdCounter++;
 
-    
-  })
+    var sidebarHTML = `
+           <div class="category" id="work">
+          <span class="circle purple"></span>
+          <span value="#">${title1}</span>
+        </div>
+
+        <div class="category">
+          <span class="circle blue"></span>
+          <span value="#">${title1}</span>
+        </div>
+
+    `;
+
+    $(".sidebar").append(sidebarHTML);
+    $("#category_title").val("");
+  });
 
   $(".add").click(function () {
     var title = $("#title").val();
@@ -56,102 +66,122 @@ $(document).ready(function () {
     $("input[name='tag']").prop("checked", false);
   });
 });
-  
+
 // <div class="category">
 //         <span class="circle purple"></span>
 //         <span>Work</span>
 //       </div>
-      // <div class="category">
-      //   <span class="circle blue"></span>
-      //   <span>Study</span>
-      // </div>
-      // <div class="category">
-      //   <span class="circle pink"></span>
-      //   <span>Entertainment</span>
-      // </div>
-      // <div class="category">
-      //   <span class="circle green"></span>
-      //   <span>Family</span>
-      // </div>
+// <div class="category">
+//   <span class="circle blue"></span>
+//   <span>Study</span>
+// </div>
+// <div class="category">
+//   <span class="circle pink"></span>
+//   <span>Entertainment</span>
+// </div>
+// <div class="category">
+//   <span class="circle green"></span>
+//   <span>Family</span>
+// </div>
 
-    // <div class="task-container-wrapper">
-    //   <div class="task-container">
-    //     <div class="task-header">Task 1 Title</div>
-    //     <p>
-    //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
-    //       aliquam massa ut varius.
-    //     </p>
+// <div class="task-container-wrapper">
+//   <div class="task-container">
+//     <div class="task-header">Task 1 Title</div>
+//     <p>
+//       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
+//       aliquam massa ut varius.
+//     </p>
 
-    //     <div class="task-options">
-    //       <div class="options-container">
-    //         <div class="edit-option">Edit</div>
-    //         <div class="delete-option">Delete</div>
-    //       </div>
-    //     </div>>
+//     <div class="task-options">
+//       <div class="options-container">
+//         <div class="edit-option">Edit</div>
+//         <div class="delete-option">Delete</div>
+//       </div>
+//     </div>>
 
-    //     <div class="task-colors">
-    //       <span class="circle blue"></span>
-    //       <span class="circle pink"></span>
-    //       <span class="circle purple"></span>
-    //     </div>
+//     <div class="task-colors">
+//       <span class="circle blue"></span>
+//       <span class="circle pink"></span>
+//       <span class="circle purple"></span>
+//     </div>
 
-    //     <div class="task-checkbox">
-    //       <input type="checkbox" id="task1Done" />
-    //       <label for="task1Done">Done</label>
-    //     </div>
-    //   </div>
+//     <div class="task-checkbox">
+//       <input type="checkbox" id="task1Done" />
+//       <label for="task1Done">Done</label>
+//     </div>
+//   </div>
 
-    //   <div class="task-container">
-    //     <div class="task-header">Task 2 Title</div>
-    //     <p>
-    //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
-    //       aliquam massa ut varius.
-    //     </p>
-    //     <div class="task-options"></div>
-    //     <div class="task-colors">
-    //       <span class="circle blue"></span>
-    //       <span class="circle pink"></span>
-    //       <span class="circle purple"></span>
-    //     </div>
-    //     <div class="task-checkbox">
-    //       <input type="checkbox" id="task2Done" />
-    //       <label for="task2Done">Done</label>
-    //     </div>
-    //   </div>
+//   <div class="task-container">
+//     <div class="task-header">Task 2 Title</div>
+//     <p>
+//       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
+//       aliquam massa ut varius.
+//     </p>
+//     <div class="task-options"></div>
+//     <div class="task-colors">
+//       <span class="circle blue"></span>
+//       <span class="circle pink"></span>
+//       <span class="circle purple"></span>
+//     </div>
+//     <div class="task-checkbox">
+//       <input type="checkbox" id="task2Done" />
+//       <label for="task2Done">Done</label>
+//     </div>
+//   </div>
 
-    //   <div class="task-container">
-    //     <div class="task-header">Task 3 Title</div>
-    //     <p>
-    //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
-    //       aliquam massa ut varius.
-    //     </p>
-    //     <div class="task-options"></div>
-    //     <div class="task-colors">
-    //       <span class="circle blue"></span>
-    //       <span class="circle pink"></span>
-    //       <span class="circle purple"></span>
-    //     </div>
+//   <div class="task-container">
+//     <div class="task-header">Task 3 Title</div>
+//     <p>
+//       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
+//       aliquam massa ut varius.
+//     </p>
+//     <div class="task-options"></div>
+//     <div class="task-colors">
+//       <span class="circle blue"></span>
+//       <span class="circle pink"></span>
+//       <span class="circle purple"></span>
+//     </div>
 
-    //     <div class="task-checkbox">
-    //       <input type="checkbox" id="task3Done" />
-    //       <label for="task3Done">Done</label>
-    //     </div>
+//     <div class="task-checkbox">
+//       <input type="checkbox" id="task3Done" />
+//       <label for="task3Done">Done</label>
+//     </div>
 
-    //   <div class="task-container">
-    //     <div class="task-header">Task 4 Title</div>
-    //     <p>
-    //       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
-    //       aliquam massa ut varius.
-    //     </p>
-    //     <div class="task-options"></div>
-    //     <div class="task-colors">
-    //       <span class="circle blue"></span>
-    //       <span class="circle pink"></span>
-    //       <span class="circle purple"></span>
-    //     </div>
-    //     <div class="task-checkbox">
-    //       <input type="checkbox" id="task4Done" />
-    //       <label for="task4Done">Done</label>
-    //     </div>
-    //   </div>
-    // </div>
+//   <div class="task-container">
+//     <div class="task-header">Task 4 Title</div>
+//     <p>
+//       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam
+//       aliquam massa ut varius.
+//     </p>
+//     <div class="task-options"></div>
+//     <div class="task-colors">
+//       <span class="circle blue"></span>
+//       <span class="circle pink"></span>
+//       <span class="circle purple"></span>
+//     </div>
+//     <div class="task-checkbox">
+//       <input type="checkbox" id="task4Done" />
+//       <label for="task4Done">Done</label>
+//     </div>
+//   </div>
+// </div>
+
+
+// $(document).ready(function () {
+//   $(".submit").click(function () {
+//     var title = $("#category_title").val(); // Corrected the ID
+
+//     // Assuming you have a global variable categoryIdCounter initialized somewhere in your code
+//     // categoryIdCounter++;
+
+//     var sidebarHTML = `
+//       <div class="category">
+//         <span class="circle"></span>
+//         <span>${title}</span>
+//       </div>
+//     `;
+
+//     $(".sidebar").append(sidebarHTML);
+//     $("#category_title").val(""); // Clear the input field after appending
+//   });
+// });
