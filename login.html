@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
-</head>
+    <link rel="stylesheet" href="login.css" />
+  </head>
 
-<body>
+  <body>
     <div class="login-wrapper">
-        <form action="" class="form">
-            <h2>Login</h2>
-            <div class="input-group">
-                <input type="text" id="email" name="loginUser" required />
-                <label for="email">Email Address</label>
-            </div>
+      <form action="" class="form">
+        <h2>Login</h2>
+        <div class="input-group">
+          <input type="text" id="email" name="loginUser" required />
+          <label for="email">Email Address</label>
+        </div>
 
-            <div class="input-group">
-                <input type="password" id="password" name="loginPassword" required />
-                <label for="password">Password</label>
-            </div>
-            <input type="submit" class="submit-btn" value="Login" onclick="auth()"/>   
-        </form>
+        <div class="input-group">
+          <input type="password" id="password" name="loginPassword" required />
+          <label for="password">Password</label>
+        </div>
+        <input
+          type="submit"
+          class="submit-btn"
+          value="Login"
+          onclick="auth()"
+        />
+        <h3>Don't have an account?</h3>
+
+       <a href="./signup.html"><input type="button" value="SignUp Here" class="signup-btn" /></a> 
+      </form>
     </div>
+
     <script src="./login.js"></script>
-</body>
+  </body>
 </html>
