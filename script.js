@@ -10,26 +10,66 @@ $(document).ready(function () {
     $(".container_category").toggle();
   });
 
-  $(".submit").click(function () {
-    var title1 = $("category_title").val();
+  $(".submit").click(function (event) {
+    var title1 = $("#category_title").val();
+    var title2 = $("#category_title").val();
+    var title3 = $("#category_title").val();
+    var title4 = $("#category_title").val();
 
-    categoryIdCounter++;
+    event.preventDefault();
+ 
+    if (title1 === "Work"){
+      
+      categoryIdCounter++;
+  
+      var main_categoryHTML = `
+      <div class="category">
+            <span class="circle purple"></span>
+            <span value="Work">${title1}</span>
+            </div>
+      `;
+  
+      $(".main_category").append(main_categoryHTML);
+      $("#category_title").val("");
+      
+    } else if (title2 === "Study"){
 
-    var sidebarHTML = `
-           <div class="category" id="work">
-          <span class="circle purple"></span>
-          <span value="#">${title1}</span>
-        </div>
+      categoryIdCounter++;
 
+      var main_categoryHTML = `
         <div class="category">
           <span class="circle blue"></span>
-          <span value="#">${title1}</span>
+          <span value="Study">${title2}</span>
         </div>
+      `;
+      $(".main_category").append(main_categoryHTML);
+      $("#category_title").val("");
 
-    `;
+    } else if (title3 === "Entertainment") {
+      categoryIdCounter++;
 
-    $(".sidebar").append(sidebarHTML);
-    $("#category_title").val("");
+      var main_categoryHTML = `
+        <div class="category">
+          <span class="circle pink"></span>
+          <span value="Entertainment">${title3}</span>
+        </div>
+      `;
+      $(".main_category").append(main_categoryHTML);
+      $("#category_title").val("");
+    } else if (title4 === "Family"){
+      categoryIdCounter++;
+
+      var main_categoryHTML = `
+        <div class="category">
+          <span class="circle green"></span>
+          <span value="Family">${title4}</span>
+        </div>
+      `;
+      $(".main_category").append(main_categoryHTML);
+      $("#category_title").val("");
+    } else {
+      alert("Invalid response")
+    }
   });
 
   $(".add").click(function () {
