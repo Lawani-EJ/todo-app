@@ -6,12 +6,12 @@
     <title>Todo Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <style> 
+    <style>
       body {
         margin: 0;
         font-family: Arial, sans-serif;
       }
-      
+
       .sidebar {
         position: fixed;
         top: 0;
@@ -36,16 +36,15 @@
         margin-bottom: 30px;
         cursor: pointer;
         background-color: whitesmoke;
-
+        display: none;
       }
 
-      .category:hover{
-
-  background-color: rgba(169, 169, 169, 0.3);   
-            transition: background-color 1s ease;
-                    height: 40px;
-                            border-radius: 5px;
-   }
+      .category:hover {
+        background-color: rgba(169, 169, 169, 0.3);
+        transition: background-color 1s ease;
+        height: 40px;
+        border-radius: 5px;
+      }
 
       .hide-done {
         margin-top: 20px;
@@ -53,16 +52,16 @@
 
       .hide-done label {
         color: #333;
-            margin-left: 35px;
-    margin-bottom: 0px;
-    margin-top: -19px;
+        margin-left: 35px;
+        margin-bottom: 0px;
+        margin-top: -19px;
       }
 
-      .hide-done:hover{
-          background-color: rgba(169, 169, 169, 0.3);   
-            transition: background-color 1s ease;
-                    height: 40px;
-                            border-radius: 5px;
+      .hide-done:hover {
+        background-color: rgba(169, 169, 169, 0.3);
+        transition: background-color 1s ease;
+        height: 40px;
+        border-radius: 5px;
       }
 
       .image-container {
@@ -75,17 +74,19 @@
       }
 
       .add-category {
-        margin-top: 20px;
-        background-color: gray;
+        margin-top: 30px;
+        background-color: #fff;
         color: #000;
         border: none;
         border-radius: 5px;
         padding: 13px;
         cursor: pointer;
+        font-size: 20px;
       }
 
       .add-category:hover {
         background-color: grey;
+        transition: background-color 1s ease;
       }
 
       .add-task {
@@ -242,15 +243,16 @@
         background-color: rgb(101, 101, 212);
       }
       .pink {
-                cursor: pointer;
+        cursor: pointer;
 
         background-color: rgb(248, 220, 224);
       }
       .green {
-                cursor: pointer;
+        cursor: pointer;
 
         background-color: rgb(133, 214, 133);
       }
+
       .button-group {
         margin-top: 20px;
       }
@@ -374,7 +376,7 @@
         <span>Family</span>
       </div>
 
-      <button class="add-category">Add Category</button>
+      <button class="add-category">+ Add Category</button>
       <div class="hide-done">
         <input type="checkbox" id="hideDone" />
         <label for="hideDone">Hide done tasks</label>
