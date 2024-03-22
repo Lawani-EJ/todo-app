@@ -11,7 +11,7 @@
       <h1>Sign Up</h1>
       <form id="signup-form" action="#" method="#">
         <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required />
+        <input type="text" id="fname" name="fname" required />
 
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" required />
@@ -19,9 +19,9 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required />
 
-        <button type="submit">Sign Up</button>
+        <input type="submit" value="SignUp" onclick="vldt()" class="signup-btn">
       </form>
-      <p>Already have an account? <a href="./login.html">Login</a></p>
     </section>
+    <script src="./signup.js"></script>
   </body>
 </html>
