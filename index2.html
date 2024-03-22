@@ -31,12 +31,11 @@
       }
 
       .category {
-        display: flex;
+        display: block;
         align-items: center;
         margin-bottom: 30px;
         cursor: pointer;
         background-color: whitesmoke;
-        display: none;
       }
 
       .category:hover {
@@ -69,7 +68,7 @@
       }
 
       .image-container img {
-        width: 100%;
+        width: 70%;
         border-radius: 10px;
       }
 
@@ -359,41 +358,40 @@
   <body>
     <aside class="sidebar">
       <h2>todo</h2>
-      <div class="category">
-        <span class="circle purple"></span>
-        <span>Work</span>
-      </div>
-      <div class="category">
-        <span class="circle blue"></span>
-        <span>Study</span>
-      </div>
-      <div class="category">
-        <span class="circle pink"></span>
-        <span>Entertainment</span>
-      </div>
-      <div class="category">
-        <span class="circle green"></span>
-        <span>Family</span>
-      </div>
+        <!-- <div class="category" id="work">
+          <span class="circle purple"></span>
+          <span value="Work" data-attr="">Work</span>
+        </div>
+        <div class="category">
+          <span class="circle blue"></span>
+          <span>Study</span>
+        </div>
+        <div class="category">
+          <span class="circle pink"></span>
+          <span>Entertainment</span>
+        </div>
+        <div class="category">
+          <span class="circle green"></span>
+          <span>Family</span>
+        </div> -->
 
-      <button class="add-category">+ Add Category</button>
-      <div class="hide-done">
-        <input type="checkbox" id="hideDone" />
-        <label for="hideDone">Hide done tasks</label>
-      </div>
+        <button class="add-category">+ Add Category</button>
+        <div class="hide-done">
+          <input type="checkbox" id="hideDone" />
+          <label for="hideDone">Hide done tasks</label>
+        </div>
 
-      <div class="image-container">
-        <img src="./image1.jpg" alt="Square Image" />
-      </div>
-    </aside>
+        <div class="image-container">
+          <img src="./image1.jpg" alt="Square Image" />
+        </div>
+      </aside>
 
     <div class="container_category">
       <h2>Add Category</h2>
       <form action="" method="">
         <label for="category_title">Category Title:</label>
         <input type="text" id="category_title" name="category_title" required />
-        <input type="submit" value="Submit" class="submit" />
-
+        <button class="submit">Submit</button>
         <div class="form-group">
           <label>Tags</label>
           <div class="color-circle purple"></div>
