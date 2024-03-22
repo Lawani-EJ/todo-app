@@ -30,8 +30,16 @@
         font-size: 60px;
       }
 
-      .category {
+      .main_category {
         display: block;
+        align-items: center;
+        margin-bottom: 30px;
+        cursor: pointer;
+        background-color: whitesmoke;
+      }
+
+      .category{
+                display: block;
         align-items: center;
         margin-bottom: 30px;
         cursor: pointer;
@@ -308,21 +316,23 @@
         height: 100px;
       }
 
-      input[type="submit"] {
-        width: 40%;
-        margin-left: 120px;
-        padding: 10px;
-        background-color: gray;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+      .submit{
+            background-color: #939e93;
+    border: none;
+    color: white;
+    align-items: center;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 140px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
       }
 
-      .submit,
-      input[type="submit"]:hover {
-        background-color: rgb(181, 181, 181);
+      .submit:hover{
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
       }
 
       @media screen and (max-width: 414px) {
@@ -358,22 +368,24 @@
   <body>
     <aside class="sidebar">
       <h2>todo</h2>
-        <!-- <div class="category" id="work">
-          <span class="circle purple"></span>
+      <div class="main_category">
+      <!-- <div class="category" id="work">
+        <span class="circle purple"></span>
           <span value="Work" data-attr="">Work</span>
-        </div>
+        </div> 
         <div class="category">
           <span class="circle blue"></span>
-          <span>Study</span>
-        </div>
-        <div class="category">
-          <span class="circle pink"></span>
-          <span>Entertainment</span>
-        </div>
+            <span>Study</span>
+          </div>
+          <div class="category">
+            <span class="circle pink"></span>
+              <span>Entertainment</span>
+            </div>
         <div class="category">
           <span class="circle green"></span>
           <span>Family</span>
-        </div> -->
+        </div>   -->
+        </div>
 
         <button class="add-category">+ Add Category</button>
         <div class="hide-done">
