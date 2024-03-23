@@ -134,6 +134,8 @@
       .task-header {
         font-size: 18px;
         margin-bottom: 10px;
+        font-size: 50px;
+      font-weight: bold;
       }
 
       .task-options {
@@ -271,14 +273,28 @@
         border-radius: 5px;
       }
       .cancel {
-        background-color: ivory;
-        color: #4b4b4b;
+        background-color: rgb(146, 33, 33);
+        color: #fff;
+                border: none;
+        -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
       }
 
+      .cancel:hover{
+                    box-shadow: 0 12px 16px 0 rgba(236, 4, 4, 0.24), 0 17px 50px 0 rgba(201, 7, 3, 0.724);
+      }
       .add {
         background-color: teal;
         color: #fff;
+        border: none;
         margin-left: 410px;
+        -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+      }
+       
+      .add:hover{
+            box-shadow: 0 12px 16px 0 rgba(17, 240, 58, 0.24), 0 17px 50px 0 rgba(10, 140, 1, 0.724);
+
       }
 
       .container_category {
@@ -335,6 +351,24 @@
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
       }
 
+      .logout-btn {
+    background-color: #c7c79f;
+    border: none;
+    color: white;
+    align-items: center;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.logout-btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
       @media screen and (max-width: 414px) {
         .sidebar {
           width: 100%;
@@ -396,6 +430,12 @@
         <div class="image-container">
           <img src="./image1.jpg" alt="Square Image" />
         </div>
+       <input
+          type="submit"
+          class="logout-btn"
+          value="Logout"
+          onclick="auth()"
+        />
       </aside>
 
     <div class="container_category">
@@ -449,7 +489,6 @@
         Others
       </div>
     </div>
-
     <script src="./script.js"></script>
   </body>
 </html>
