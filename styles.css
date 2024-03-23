@@ -48,6 +48,12 @@ h2 {
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
+            -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+}
+
+.button:hover{
+                box-shadow: 0 12px 16px 0 rgb(193, 180, 129), 0 17px 50px 0 rgba(236, 240, 158, 0.905);
 }
 
 
